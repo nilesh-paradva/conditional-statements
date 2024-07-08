@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <table border="1" cellspacing="0" cellpadding="8">
         <tr>
@@ -25,42 +27,33 @@
 
 
     <script>
-        var year,price,i
+        var year, price, i;
         year = parseInt(prompt("Enter Your Year"));
         price = parseInt(prompt("Enter your Price"));
 
-        if(year>=3 && year<=5){
-                // if(year<=5){
-
-                // }else{
-
-                // }
-            i=(price*3*year)/100
-            document.getElementById("n2").innerHTML = i;
-
-        }else if(year>=5 && year<=8){
-
-            i=(price*5*year)/100
-            document.getElementById("n3").innerHTML = i;
-
-        }else if(year>=8 && year<=12){
-
-            i=(price*12*year)/100
-            document.getElementById("n4").innerHTML = i;
-
-        }else if(year>=12){
-            i=(price*15*year)/100
-            document.getElementById("n5").innerHTML = i;
-        }else{
+        if (year > 0 && year <= 3) {
             document.getElementById("n1").innerHTML = year + "Enter your valid year";
+        } else {
+            if (year > 3 && year <= 5) {
+                i = (price * 3 * year) / 100
+                document.getElementById("n2").innerHTML = i;
+            } else {
+                if (year > 5 && year <= 8) {
+                    i = (price * 5 * year) / 100
+                    document.getElementById("n3").innerHTML = i;
+                } else {
+                    if (year > 8 && year <= 12) {
+                        i = (price * 12 * year) / 100
+                        document.getElementById("n4").innerHTML = i;
+                    } else {
+                        i = (price * 15 * year) / 100
+                        document.getElementById("n5").innerHTML = i;
+                    }
+                }
+            }
         }
-        </script>
-        <!-- if(year<=2){
-            i=(price*3*year)/100
-            document.getElementById("n4").innerHTML =i;
-        }else{
-            document.getElementById("n1").innerHTML = year + "Enter your valid year";
-     } -->
+    </script>
 
 </body>
+
 </html>
