@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>age <= 0</th>
+            <th>age >= 1 && age <= 5</th>
+            <th>age >= 6 && age <= 10</th>
+            <th>age >= 10</th>
+        </tr>
+        <tr>
+            <td id="n1"></td>
+            <td id="n2"></td>
+            <td id="n3"></td>
+            <td id="n4"></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var age = parseInt(prompt("Enter Enter your age:-"));
+
+        if (age <= 0) {
+            document.getElementById("n1").innerHTML = age + "= age - Invalid input";
+
+        } else if (age >= 1 && age <= 5) {
+            document.getElementById("n2").innerHTML = age + "= age - Infant";
+
+        } else if (age >= 6 && age <= 10) {
+            document.getElementById("n3").innerHTML = age + "= age - Child";
+
+        } else {
+            document.getElementById("n4").innerHTML = age + "= age - Adult";
+        }
+    </script>
+</body>
+
+</html>

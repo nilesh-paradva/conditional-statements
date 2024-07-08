@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>Age >= 25</th>
+            <th>age >= 15 & age <=21</th>
+            <th>age >= 10 && age <= 15</th>
+            <th>Age <= 15</th>
+        </tr>
+        <tr>
+            <td id="n1"></td>
+            <td id="n2"></td>
+            <td id="n3"></td>
+            <td id="n4"></td>
+        </tr>
+    </table>
+
+    <script>
+        var age = parseInt(prompt("Enter your age:- "));
+
+        if (age >= 21) {
+
+            document.getElementById("n1").innerHTML = age + "= You can vote in the election";
+
+        } else if (age >= 15 && age <=21) {
+
+            document.getElementById("n2").innerHTML = age + "= You are a teenager and cannot vote";
+
+        } else if (age >= 10 && age <= 15) {
+
+            document.getElementById("n3").innerHTML = age + "= You are too young to vote";
+
+        } else {
+
+            document.getElementById("n4").innerHTML = age + "= You are still a baby";
+
+        }
+    </script>
+</body>
+
+</html>

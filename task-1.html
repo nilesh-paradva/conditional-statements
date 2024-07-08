@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>For first 50 units, Rs: 1/unit</br>For next 100 units, 2/unit</br>For next 100 units, 3/ units</br>For units above 250, 4/units</th>
+        </tr>
+        <tr>
+            <td id="n1"></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var unit = parseInt(prompt("Enter your unit:-"));
+
+        
+        bill = 0
+
+        if (unit <= 50) {
+            bill = unit * 1
+        }
+        else if (unit <= 150) {
+            bill = 50 * 1 + (unit - 50) * 2
+        }
+        else if (unit <= 250) {
+            bill = 50 * 1 + 100 * 2 + (unit - 150) * 3
+        }
+        else if (unit > 250) {
+            bill = 50 * 1 + 100 * 2 + 150 * 3 + (unit - 250) * 4
+        }
+
+        if (bill > 150) {
+            bill = bill + bill * 0.2
+        }
+
+        document.getElementById("n1").innerHTML = bill; 
+
+    </script>
+</body>
+
+</html>

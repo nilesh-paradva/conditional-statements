@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>1 to 4 = Winter</th>
+            <th>5 to 8= Summer</th>
+            <th>9 to 12= Monsoon</th>
+            <th>12 >= "Invalid season"</th>
+        </tr>
+        <tr>
+            <td id="n1"></td>
+            <td id="n2"></td>
+            <td id="n3"></td>
+            <td id="n4"></td>
+        </tr>
+    </table>
+
+    <script>
+        var ch,sesone;
+
+        ch = parseInt(prompt("Enter your Number"));
+
+        switch (ch)
+        {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            document.getElementById("n1").innerHTML = ch + "= Winter";
+            break;
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            document.getElementById("n2").innerHTML = ch  + "= Summer";
+            break;
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            document.getElementById("n3").innerHTML = ch + "= Monsoon";
+            break;
+            default:
+            document.getElementById("n4").innerHTML = ch + "= Invalid season";
+       }
+
+    </script>
+</body>
+</html>
