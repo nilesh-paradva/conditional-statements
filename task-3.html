@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>Invalid year (3>year)</th>
+            <th>3>N<=5 then R is 3</th>
+            <th>5>N<=8 then R is 5</th>
+            <th>8>N<=12 then R is 12</th>
+            <th>year>12 then R is 15</th>
+        </tr>
+        <tr>
+            <td id="n1"></td>
+            <td id="n2"></td>
+            <td id="n3"></td>
+            <td id="n4"></td>
+            <td id="n5"></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var year,price,i
+        year = parseInt(prompt("Enter Your Year"));
+        price = parseInt(prompt("Enter your Price"));
+
+        if(year>=3 && year<=5){
+                // if(year<=5){
+
+                // }else{
+
+                // }
+            i=(price*3*year)/100
+            document.getElementById("n2").innerHTML = i;
+
+        }else if(year>=5 && year<=8){
+
+            i=(price*3*year)/100
+            document.getElementById("n3").innerHTML = i;
+
+        }else if(year>=8 && year<=12){
+
+            i=(price*3*year)/100
+            document.getElementById("n4").innerHTML = i;
+
+        }else if(year>=12){
+            i=(price*3*year)/100
+            document.getElementById("n5").innerHTML = i;
+        }else{
+            document.getElementById("n1").innerHTML = year + "Enter your valid year";
+        }
+        </script>
+        <!-- if(year<=2){
+            i=(price*3*year)/100
+            document.getElementById("n4").innerHTML =i;
+        }else{
+            document.getElementById("n1").innerHTML = year + "Enter your valid year";
+     } -->
+
+</body>
+</html>
